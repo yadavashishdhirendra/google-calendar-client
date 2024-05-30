@@ -1,0 +1,30 @@
+.container-calendar {
+    padding: 30px 20px;
+
+    h2 {
+        font-family: 'Brandon_Bold';
+        font-size: 32px;
+        color: #1c1c1c;
+    }
+
+    .cta-container {
+        @include flex($gap: 10px, $justify: flex-start);
+
+        button {
+            margin: 20px 0px;
+            color: white;
+            font-size: 18px;
+            padding: 5px 15px;
+            border-radius: 2px !important;
+
+            &:nth-child(1) {
+                background-color: #423F8D !important;
+
+            }
+
+            &:nth-child(2) {
+                background-color: #C738BD !important;
+            }
+        }
+    }
+}

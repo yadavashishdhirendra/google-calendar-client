@@ -1,0 +1,140 @@
+.header-cross-title {
+    @include flex($dir: row, $align: center, $justify: space-between);
+
+    >h2 {
+        font-family: "Poppins_Bold" !important;
+        font-size: 22px !important;
+        text-align: center !important;
+        white-space: pre-line;
+        flex: 2.2;
+        line-height: 1.3195 !important;
+    }
+}
+
+.center-text {
+    @include flex($dir: row, $align: center, $justify: space-between);
+    border-bottom: 1px solid rgba(229, 229, 239, 0.3);
+    padding-bottom: 15px;
+
+    >h2 {
+        font-family: "Poppins_Bold" !important;
+        font-size: 22px !important;
+        text-align: center !important;
+        white-space: pre-line;
+        flex: 2.2;
+        line-height: 1.3195 !important;
+    }
+}
+
+.left-align-text {
+    @include flex($dir: row, $align: center, $justify: space-between);
+    border-bottom: 1px solid rgba(229, 229, 239, 0.3);
+    padding-bottom: 15px;
+
+    >h2 {
+        font-family: 'Brandon_Bold' !important;
+        font-size: 22px !important;
+        text-align: left !important;
+        white-space: pre-line;
+        flex: 2.2;
+        line-height: 1.3195 !important;
+    }
+}
+
+.bg-cross {
+    background-color: #1c1c1c;
+    @include circle($w: 30px, $h: 30px, $br: 50%);
+    @include flex($dir: row, $align: center, $justify: center);
+}
+
+.cross-icon-col {
+    color: white;
+    font-size: 22px !important;
+}
+
+@media screen and (max-width: 576px) {
+    .MuiBox-root {
+        width: 95% !important;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .modal-container {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .css-zyiran {
+        max-width: 95%;
+    }
+}
+
+.css-79ws1d-MuiModal-root {
+    overflow: hidden !important;
+}
+
+.css-z3qzso {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+        0px 16px 35px 0px rgba(0, 0, 0, 0.1), 0px 64px 64px 0px rgba(0, 0, 0, 0.09),
+        0px 143px 86px 0px rgba(0, 0, 0, 0.05),
+        0px 255px 102px 0px rgba(0, 0, 0, 0.01),
+        0px 398px 111px 0px rgba(0, 0, 0, 0) !important;
+}
+
+
+// Create Edit Form css
+
+.css-1u9des2-indicatorSeparator {
+    background-color: transparent !important;
+}
+
+.action-icons {
+    @include flex($justify: flex-end);
+
+    button {
+        margin-top: 10px;
+        border-radius: 50px;
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+        color: red
+    }
+}
+
+.create-input-form {
+    @include grid(1fr 1fr, $gap: 20px);
+    margin-top: 20px;
+
+    div {
+        >label {
+            font-size: 16px;
+        }
+
+        >input {
+            width: 100%;
+            height: 48px;
+            border: none;
+            background-color: #E5E6FF;
+            outline: none;
+            border-radius: 5px;
+            padding: 4px 10px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.schedule-event {
+    @include flex();
+    button {
+        background-color: #423F8D !important;
+        margin-top: 30px;
+        height: 48px;
+        width: 200px;
+        color: white;
+        font-size: 18px !important;
+
+        >span>svg{
+            vertical-align: sub;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.success-container {
+    max-width: 500px;
+    height: 100vh;
+    @include flex();
+    margin: auto;
+    text-align: center;
+
+    h1 {
+        font-family: 'Brandon_Bold';
+        margin-top: -140px;
+    }
+}

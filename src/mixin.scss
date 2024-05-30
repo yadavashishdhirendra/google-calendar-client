@@ -1,0 +1,102 @@
+// Define your media queries
+$media_queries: (
+    "mobile": "screen and (max-width: 598px)",
+    "tablet": "screen and (max-width: 992px)",
+    "midTablet": "screen and (max-width: 768px)",
+    "mediumTablet": "screen and (max-width: 680px)",
+    "LargeTablet": "screen and (max-width: 1080px)",
+);
+
+// Define your mixin
+@mixin for_breakpoint($breakpoints...) {
+    $conditions: (
+    );
+
+@each $breakpoint in $breakpoints {
+    // If the key exists in the map
+    $query: map-get($media_queries, $breakpoint);
+
+    @if $query {
+        $conditions: append($conditions, $query, comma);
+    }
+}
+
+@media #{$conditions} {
+    @content;
+}
+}
+
+@mixin circle($w, $h, $br: 50%) {
+    width: $w;
+    height: $h;
+    border-radius: $br;
+    -webkit-border-radius: $br;
+    -moz-border-radius: $br;
+    -ms-border-radius: $br;
+    -o-border-radius: $br;
+}
+
+@mixin flex($dir: row, $align: center, $justify: center, $gap: 5px) {
+    display: flex;
+    flex-direction: $dir;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+@mixin grid($coloumns: 1fr 1fr, $gap: 10px) {
+    display: grid;
+    grid-template-columns: $coloumns;
+    gap: $gap;
+}
+
+@mixin button($bg: transparent,
+    $color: white,
+    $FF: "Poppins_Thin",
+    $TT: capitalize,
+    $h: 20px,
+    $br: 0px,
+    $w: initial,
+    $Fs: 14px) {
+    background-color: $bg !important;
+    color: $color !important;
+    font-family: $FF !important;
+    text-transform: $TT !important;
+    height: $h !important;
+    width: $w !important;
+    transition: 0.3s ease-in !important;
+    min-width: $w !important;
+    border-radius: $br !important;
+    font-size: $Fs;
+    -webkit-border-radius: $br !important;
+    -moz-border-radius: $br !important;
+    -ms-border-radius: $br !important;
+    -o-border-radius: $br !important;
+
+    &:active {
+        transform: matrix(0.95, 0, 0, 0.95, 0, 0) !important;
+    }
+}
+
+@mixin input($out: none,
+    $b: none,
+    $h: 48px,
+    $p: 5px 10px,
+    $br: 5px,
+    $bg: rgba(221, 225, 237, 1),
+    $FF: "Poppins_SemiBold"
+
+) {
+    outline: $out;
+    border: $b;
+    height: $h;
+    padding: $p;
+    width: 100%;
+    border-radius: $br;
+    font-family: $FF;
+    background-color: $bg;
+    -webkit-border-radius: $br;
+    -moz-border-radius: $br;
+    -ms-border-radius: $br;
+    -o-border-radius: $br;
+}

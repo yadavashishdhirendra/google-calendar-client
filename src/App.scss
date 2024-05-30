@@ -1,0 +1,77 @@
+@import "mixin";
+@import './Pages/Styles/success';
+@import './Pages/Styles/dashboard';
+@import './Pages/Styles/modal';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  font-family: 'Brandon_Bold' !important;
+  text-transform: capitalize !important;
+  letter-spacing: 0.3px !important;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+// Font Family
+@font-face {
+  font-family: Brandon_Bold;
+  src: url('./Assets/Fonts/Brandon_bld.otf');
+}
+
+// Loading
+.loading-container {
+  @include flex();
+}
+
+// Loading
+
+// table
+thead {
+  background-color: #423F8D;
+
+  tr {
+    th>div>a {
+      color: white !important;
+    }
+  }
+}
+
+// table
+
+// Date Picker
+.date-picker-filter>div {
+  flex-direction: column !important;
+  width: 100%;
+  padding-top: 5px !important;
+}
+
+.date-picker-filter>div>div>div>input {
+  background-color: transparent !important;
+  height: 44px !important;
+}
+
+.date-picker-filter>div>div>div>fieldset {
+  border-color: transparent !important;
+  border: none !important;
+}
+
+.date-picker-filter>div>div>label{
+  display: none !important;
+}
+
+// Date Picker
+
+#react-select-3-input{
+  height: auto !important;
+}
