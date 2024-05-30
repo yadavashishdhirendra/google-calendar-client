@@ -6,7 +6,6 @@ import Modal from "@mui/material/Modal";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { Fade } from "@mui/material";
-import ConfirmationDialog from "./ModalContent/ConfirmationDialog";
 import CreateEditEvents from "./ModalContent/CreateEditEvents";
 
 const ModalContainer = (props) => {
@@ -38,22 +37,12 @@ const ModalContainer = (props) => {
     };
 
     const componentMap = {
-        0: (
-            <ConfirmationDialog
-                close={props.closeModal}
-                title={props.title}
-            />
-        ),
         1: (
             <CreateEditEvents close={props.closeModal} event_id={props.event_id} create_event={props.createEvent} />
         )
     };
 
     useEffect(() => {
-        if (index === 0) {
-            setWidth(402);
-            setHeight(234);
-        }
         if (index === 1) {
             setWidth(600)
             setHeight(400)
